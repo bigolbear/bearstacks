@@ -11,20 +11,20 @@ services:
       TS3SERVER_DB_SQLCREATEPATH: create_mariadb
       TS3SERVER_DB_HOST: db
       TS3SERVER_DB_USER: root
-      TS3SERVER_DB_PASSWORD: example
+      TS3SERVER_DB_PASSWORD: '!4On9G2o^8V5g3sfoT>_'
       TS3SERVER_DB_NAME: teamspeak
       TS3SERVER_DB_WAITUNTILREADY: 30
       TS3SERVER_LICENSE: accept
-      VIRTUAL_HOST: ts.bigolbear.net
+      VIRTUAL_HOST: games.bigolbear.net
     volumes:
-      - "/data/teamspeak3-stack/teamspeak3/var/ts3server:/var/ts3server"
+      - "/mnt/c/Users/rmclo/wsl/bearstacks/teamspeak3-stack/data/app:/var/ts3server"
   db:
     image: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: '!4On9G2o^8V5g3sfoT>_'
       MYSQL_DATABASE: teamspeak
     volumes:
-      - "/data/teamspeak3-stack/db/var/log:/var/log/mysql"
-      - "/data/teamspeak3-stack/db/var/lib:/var/lib/mysql"
-      - "/data/teamspeak3-stack/db/etc/mysql:/etc/mysql"
+      - "/mnt/c/Users/rmclo/wsl/bearstacks/teamspeak3-stack/data/db/var/log:/var/log/mysql"
+      - "/mnt/c/Users/rmclo/wsl/bearstacks/teamspeak3-stack/data/db/var/lib:/var/lib/mysql"
+      - "/mnt/c/Users/rmclo/wsl/bearstacks/teamspeak3-stack/data/db/etc/mysql:/etc/mysql"
